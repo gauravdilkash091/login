@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet"  href="sgpa.css">
+	<script src="https://kit.fontawesome.com/7ade572a84.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		label
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="sgpa_calculator.js"></script>
+	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+			  /*make an HTTP request using the attribute value as the file name:*/
+			  xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				  /*remove the attribute, and call this function once more:*/
+				  elmnt.removeAttribute("w3-include-html");
+				  includeHTML();
+				}
+			  }      
+			  xhttp.open("GET", file, true);
+			  xhttp.send();
+			  /*exit the function:*/
+			  return;
+			}
+		  }
+		};
+		</script>
+	</head>
+	<body>
+		<div class="yo">
+		<div class="container">
+			<img src="img1.jpg" class="img-fluid"/>
+		<div class="row">
+		<div class="col-lg-4 col-12">
+		<form  class="w-100 ml-auto mr-auto"  id="form-1" name="form-1" novalidate="true">
+		<div class="form-group">
+		<label for="subjects">No. Of Subjects:</label>
+		<div class="row"><div class="col-12"><input type="number" class="form-control f1 effect-1 rounded-0" placeholder="Enter total No. of subjects" id="nsub" required="required" min='5' max="15">
+		<span class="focus-bg"><i></i></span></div></div>
+		<div id="error"></div>
+		</div>
+		<center>
+		<button type="submit" class="btn  btn-primary mb-4">Next</button>
+		</center>		
+		</form>
+		</div>
+		<div class="col-lg-8 col-12">
+		<form action="" class="w-100 ml-auto mr-auto"  id="form-2" name="form-2" >
+		<datalist id="grades">
+		<option >A</option>
+		<option >A-</option>
+		<option >B</option>
+		<option >B-</option>
+		<option >C</option>
+		<option >C-</option>
+		<option >D</option>
+		<option >D-</option>
+		<option >E</option>
+		<option >F</option>
+		</datalist>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required" />
+		<!-- <span class="focus-bg"><i></i></span> -->
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5" />
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5" />
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>
+		</div>
+		<div class="form-group d-flex">
+		<input  list="grades" class="form-control choice" placeholder="Enter a grade" required="required"/>
+		<input  type="number" min="0.5" max="6.0" class="form-control ml-5 credit" placeholder="Enter course credits" required="required" step="0.5"/>  
+		</div>
+		<center>
+		<button type="submit" class="btn btn-primary mb-3" data-toggle="modal" data-target="#mdl">Calculate</button>
+		</center>		
+		<div class="modal fade" id="mdl" tabindex="-1" role="dialog" aria-labelledby="mdlTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document"> 
+		<div class="modal-content">
+		<div class="modal-header">
+		<h3 class="modal-title" id="mdlTitle">Result</h3>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+		</div>
+		<div class="modal-body" id="showdata">
+
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-danger bt1" data-dismiss="modal">X</button>
+		<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+		</div>
+		</div>
+		</div>
+		</div>
+		<!-- <div class="modal fade" id="mdl" tabindex="-1" role="dialog" aria-labelledby="mdlTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document"> 
+		<div class="modal-content">
+		<div class="modal-header">
+		<h3 class="modal-title" id="mdlTitle">Error</h3>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+		</div>
+		<div class="modal-body" id="show">
+
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-danger bt1" data-dismiss="modal">X</button>
+		<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+		</div>
+		</div>
+		</div>
+		</div>
+	    </form>
+		</div>
+		</div>
+		</div>
+		</div>
+		<footer id="footer" class="container-fluid text-white bg-dark py-3 mt-5"> 
+      <small><a href="#" class="text-decoration-none text-white float-left">Back to top</a></small>
+      <small  class="float-right"> &copy; 2020-2021 Company, Inc &middot; Privacy &middot; Terms</small>
+      </footer> 
+		<div w3-include-html="navbar.html">	
+   <script>
+	includeHTML();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

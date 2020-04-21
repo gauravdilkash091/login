@@ -1,0 +1,17 @@
+
+.navbar {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  }
+
+#small{
+    float: right;
+}
+#id1 {
+  font-size: calc(80% + .1vw + .1vh);
+}
+# {
+  position: relative;
+  height: 55px;
+  margin-top: -30px;
+  clear: both;
+  }
